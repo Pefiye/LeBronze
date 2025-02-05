@@ -18,6 +18,10 @@
     color: white;
     transition: .1s;
 }
+html 
+{
+    scroll-behavior: smooth;
+}
 body
 {
     overflow-x: hidden;   
@@ -53,6 +57,7 @@ li a:hover
     color: var(--accent);
 }
 
+/* ==================================================== */
 
 .page1
 {
@@ -81,7 +86,7 @@ li a:hover
     z-index: 2;
     margin-top: 0;
     width: 25vw;
-    height: 100vh;
+    height: 90vh;
     padding-top: 25vh;
     padding-left: 3vw;
     /* background-color: rgb(40, 37, 31); */
@@ -90,7 +95,7 @@ li a:hover
 .page1 .kanan
 {
     width: 75vw;
-    height: 100vh;
+    height: 90vh;
     /* background-color: rgb(255, 140, 0); */
 }
 
@@ -134,6 +139,7 @@ li a:hover
     width: 96vw;
     height: 150vh;
     margin: 2%;
+    margin-top: 4%;
     z-index: -2;
 }
 
