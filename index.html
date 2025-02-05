@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LeBronze</title>
     <link rel="stylesheet" href="style.css">
 
     <!-- poppins -->
@@ -13,13 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- ================================================================== -->
 <body>
-<header>
+<header id="navbar">
     <a href=""><h2 class="Title"><span style="color: #3b72ff;">Le</span>Bronze</h2></a>
     <nav>
         <ul>
             <li><a href="" class="li1">Home</a></li>
-            <li><a href="" class="li2">Products</a></li>
-            <li><a href="" class="li3">About</a></li>
+            <li><a href="Products.html" class="li2">Products</a></li>
+            <li><a href="#page2" class="li3">About</a></li>
             <li><a href="" class="li4">Help</a></li>
         </ul>
     </nav>
@@ -31,7 +31,7 @@
     <div class="kiri">
         <h1><span style="color: #3b72ff; font-weight: 600;">Le</span>Bronze</h1>
         <p>Redefining Style, Elevating Quality</p>
-        <button>Shop Now</button>
+        <a href="Products.html"><button>Shop Now</button></a>
     </div>
 
 
@@ -42,13 +42,14 @@
 
 
 <!-- ================================================ -->
-<section class="page2">
+<section class="page2"id="page2">
 <div class="atas">
     <div class="kiri">
         <h1>Men or Women's Wear <br> <span>We Got It</span></h1>
     </div>
     <div class="kanan">
-        <p>smfsksfka</p>
+        <p>Reviews from Our Satisfied Costumer</p>
+        <a href="#"><button>Reviews</button></a>
     </div>
 
 </div>
@@ -69,6 +70,19 @@
 </div>
 </section>
 
+<script>   
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) 
+  {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-60px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 
 </body>
 </html>
