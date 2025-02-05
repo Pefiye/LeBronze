@@ -1,7 +1,8 @@
 :root
 {
-    --primary : #3b72ff;
-    --secondary : #002C9A;
+    --accent : #3b72ff;
+    --primary : beige;
+    --secondary : #e3e3cb;
 }
 ::-webkit-scrollbar
 {
@@ -15,6 +16,7 @@
     margin: 0;
     text-decoration: none;
     color: white;
+    transition: .1s;
 }
 body
 {
@@ -34,7 +36,6 @@ header
     padding: 1.5%;
     box-sizing:border-box;
     align-items: center;
-    transition: .3s;
 }
 .Title
 {
@@ -45,11 +46,11 @@ ul
     list-style: none;
     display: flex;
     gap: 10px;
-    padding: auto
-;}
-.li1
+    padding: auto;
+}
+li a:hover
 {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 
@@ -111,14 +112,14 @@ ul
 }
 .page1 button:hover
 {
-    background: none;
-    filter: brightness(.8);
+    outline: none; 
+    color: #101010;
+    background-color: white;
 }
 .page1 button:active
 {
-    outline: #8e8e8e solid 1px;
-    background-color: #e3e3cb;
-    color: #101010;    
+    outline: none; 
+    transform: scale(0.9);
 }
 
 
@@ -129,7 +130,7 @@ ul
 .page2
 {
     position: relative;
-    background-color: beige;
+    background-color: var(--primary);
     width: 96vw;
     height: 150vh;
     margin: 2%;
@@ -148,7 +149,7 @@ ul
     z-index: -1;
     position: absolute;
     content: "   ";
-    background-color: var(--primary);
+    background-color: var(--accent);
     width: 225px;
     height: 40px;
     right: 0;
@@ -158,7 +159,7 @@ ul
 {
     display: flex;
     height: 20%;
-
+    background-color: var(--secondary);
 }
 .page2 .bawah
 {
@@ -171,7 +172,6 @@ ul
 
 .page2 .kiri
 {
-    background-color: rgb(227, 227, 203);
     width: 60%;
     padding: 4%;
     padding-left: 10%;
@@ -189,14 +189,13 @@ ul
 {
     font-size: 36px;
     font-weight: 600;
-    color: var(--secondary)
+    color: var(--accent)
 }
 
 
 
 .page2 .kanan
 {
-    background-color: #e3e3cb;
     width: 40%;
     text-align: center;
     padding: 3%;
@@ -215,10 +214,10 @@ ul
     padding-right: 5%;
     border-radius: 18px;
     border: none;
-    outline: black solid 1px;
+    outline: #101010 solid 1px;
     border-color: #101010;
     border-width: 1px;
-    background-color: beige;
+    background-color: var(--primary);
     z-index: 4;
     cursor: pointer;
     margin: 10px;
@@ -227,7 +226,7 @@ ul
 }
 .page2 .atas .kanan button:hover
 {
-    background-color: #e3e3cb;
+    background-color: var(--secondary);
 }
 
 
@@ -244,24 +243,64 @@ ul
 
 .page2 .kanan2
 {
-    color: black;
+    color: #101010;
     width: 70%;
     padding: 3%;
     box-sizing: border-box;
     /* background-color: aqua; */
 }
+
+.page2 .kanan2 h2 span
+{
+    color: #101010;
+    font-size: 105%; 
+
+}
 .page2 .kanan2 h2
 {
-    font-size: 22px; 
+    font-size: 150%; 
+    font-weight: 300;
+
 
 }
 
+/* ========================================================================================== */
 
-/* ============================== */
+.page3
 
-.Products
 {
+    position: relative;
+    font-weight: 500;
+    background-color: var(--secondary);
+    color: #101010;
+    width: 100vw;
+    height: 30vh;
+    padding: 3%;
+    box-sizing: border-box;
+
 }
+.page3 ul li a
+{
+    text-decoration: underline;
+
+    color: #272727;
+
+}
+.page3 ul li a:hover
+{
+    color: #101010;
+    filter: brightness(.5);
+}
+
+.page3 p
+{
+    font-size: 14px;
+    color: #101010;
+    line-height: 10px;
+}
+
+/* ========================================================================================== */
+
 .Products div
 {
     display: flex;
@@ -269,6 +308,49 @@ ul
     gap: 10px;
     margin: 10px;
 }
+.Products .span
+{
+    width: 110%;
+    height: 110%;
+    background-color: #475065;
+    clip-path: circle();
+}
+.Products form input
+{
+    opacity: 0;
+}
+.Products form input:checked > .Products
+{
+    background-color: #002C9A;
+}
+
+.container {
+    display: block;
+    position: relative;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+}  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    clip-path: polygon(50% 30%, 70% 5%, 90% 10%, 100% 60%, 50% 100%, 0% 60%, 10% 10%, 30% 5%);    height: 25px;
+    width: 25px;
+    background-color: #475065;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: #f32121;
+  }
+
+
 
 
 
@@ -298,11 +380,18 @@ ul
     outline: white solid 1px;
     cursor: pointer;
 }
+#back:hover
+{
+    outline: none; 
+    color: #101010;
+    background-color: white;
+}
 #back:active
 {
-    outline: #8e8e8e solid 1px;
-    background-color: #e3e3cb;
-    color: #101010;    
+    outline: none; 
+    transform: scale(0.9);
+    color: #101010;
+    background-color: white;
 }
 
 .Products nav span
@@ -325,13 +414,20 @@ ul
     border: none;
     outline: white solid 1px;
     cursor: pointer;
-    transition: .1s;
+}
+
+#purchase:hover
+{
+    outline: none; 
+    color: #101010;
+    background-color: white;
 }
 #purchase:active
 {
-    outline: #8e8e8e solid 1px;
-    background-color: #e3e3cb;
+    outline: none; 
+    transform: scale(0.9);
     color: #101010;
+    background-color: white;
 }
 
 
@@ -361,3 +457,39 @@ ul
 {
     font-weight: 700;
 }
+.Products form section
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.Products form section div
+{
+    display: block;
+}
+.Products form section div button
+{
+    color: #ffffff;
+    padding: 5%;
+    min-width: 100px;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: white solid 1px;
+    cursor: pointer;
+}
+.Products button:hover
+{
+    outline: none; 
+    color: #101010;
+    background-color: white;
+}
+.Products button:active
+{
+    outline: none; 
+    transform: scale(0.9);
+    color: #101010;
+    background-color: white;
+}
+
