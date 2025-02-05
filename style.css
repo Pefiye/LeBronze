@@ -23,15 +23,18 @@ body
 }
 header
 {
+    text-shadow: #101010;
     z-index: 5;
     position: fixed;
-    background-color: #101010;
+    background-color: #101010ce;
     width: 100VW;
+    height: 10%;
     display: flex;
     justify-content: space-between;
     padding: 1.5%;
     box-sizing:border-box;
     align-items: center;
+    transition: .3s;
 }
 .Title
 {
@@ -58,18 +61,18 @@ ul
 
 }
 
+.page1 p
+{
+    width: 500px;
+
+}
+
 .page1 .kiri h1
 {
     margin-top: 30%;
     font-weight: 600;
     font-size: 60px;
     width: 300px;
-}
-
-.page1 p
-{
-    width: 500px;
-
 }
 
 .page1 .kiri
@@ -100,18 +103,22 @@ ul
 .page1 button
 {
     background: none;
-    border-color: white;
-    padding: 5px;
+    border: none;
+    outline: rgb(255, 255, 255) solid 1px;
+    padding: 7px;
     margin: 20px;
-
+    cursor: pointer;
 }
 .page1 button:hover
 {
     background: none;
-    border-color: rgb(192, 192, 192);
-    padding: 5px;
-    margin: 20px;
-
+    filter: brightness(.8);
+}
+.page1 button:active
+{
+    outline: #8e8e8e solid 1px;
+    background-color: #e3e3cb;
+    color: #101010;    
 }
 
 
@@ -189,9 +196,40 @@ ul
 
 .page2 .kanan
 {
-    background-color: rgb(227, 227, 203);
+    background-color: #e3e3cb;
     width: 40%;
+    text-align: center;
+    padding: 3%;
 }
+.page2 .kanan p
+{
+    color: #101010;
+    cursor: pointer;
+
+
+}
+.page2 .atas .kanan button
+{
+    padding: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-radius: 18px;
+    border: none;
+    outline: black solid 1px;
+    border-color: #101010;
+    border-width: 1px;
+    background-color: beige;
+    z-index: 4;
+    cursor: pointer;
+    margin: 10px;
+    color: #101010;
+
+}
+.page2 .atas .kanan button:hover
+{
+    background-color: #e3e3cb;
+}
+
 
 
 
@@ -216,4 +254,110 @@ ul
 {
     font-size: 22px; 
 
+}
+
+
+/* ============================== */
+
+.Products
+{
+}
+.Products div
+{
+    display: flex;
+    flex-direction:row-reverse;
+    gap: 10px;
+    margin: 10px;
+}
+
+
+
+.Products nav
+{
+    position: fixed;
+    display: flex;
+    background-color: rgb(12, 12, 12);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15vw;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+#back
+{
+    color: #ffffff;
+    padding: 20%;
+    padding-left: 50%;
+    padding-right: 50%;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: white solid 1px;
+    cursor: pointer;
+}
+#back:active
+{
+    outline: #8e8e8e solid 1px;
+    background-color: #e3e3cb;
+    color: #101010;    
+}
+
+.Products nav span
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 2vh;
+    display: flex;
+}
+
+#purchase
+{
+    color: #ffffff;
+    padding: 20%;
+    padding-left: 80%;
+    padding-right: 80%;
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    outline: white solid 1px;
+    cursor: pointer;
+    transition: .1s;
+}
+#purchase:active
+{
+    outline: #8e8e8e solid 1px;
+    background-color: #e3e3cb;
+    color: #101010;
+}
+
+
+
+.Products form
+{
+    width: 25vw;
+    height: 70vh;
+    background-color: rgb(19, 19, 19);
+    padding: 1%;
+}
+
+.Products input
+{
+    width: 30px;
+    height: 30px;
+}
+
+.Products img
+{
+    margin-top: -3%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Products h2
+{
+    font-weight: 700;
 }
