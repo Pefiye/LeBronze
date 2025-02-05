@@ -1,0 +1,219 @@
+:root
+{
+    --primary : #3b72ff;
+    --secondary : #002C9A;
+}
+::-webkit-scrollbar
+{
+    display: none;
+}
+*
+{
+    font-family: poppins;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: white;
+}
+body
+{
+    overflow-x: hidden;   
+    background-color: #101010;
+}
+header
+{
+    z-index: 5;
+    position: fixed;
+    background-color: #101010;
+    width: 100VW;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5%;
+    box-sizing:border-box;
+    align-items: center;
+}
+.Title
+{
+    display: flex;
+}
+ul
+{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: auto
+;}
+.li1
+{
+    color: var(--primary);
+}
+
+
+.page1
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+}
+
+.page1 .kiri h1
+{
+    margin-top: 30%;
+    font-weight: 600;
+    font-size: 60px;
+    width: 300px;
+}
+
+.page1 p
+{
+    width: 500px;
+
+}
+
+.page1 .kiri
+{
+    z-index: 2;
+    margin-top: 0;
+    width: 25vw;
+    height: 100vh;
+    padding-top: 25vh;
+    padding-left: 3vw;
+    /* background-color: rgb(40, 37, 31); */
+    box-sizing: border-box;
+}
+.page1 .kanan
+{
+    width: 75vw;
+    height: 100vh;
+    /* background-color: rgb(255, 140, 0); */
+}
+
+.page1 img
+{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.page1 button
+{
+    background: none;
+    border-color: white;
+    padding: 5px;
+    margin: 20px;
+
+}
+.page1 button:hover
+{
+    background: none;
+    border-color: rgb(192, 192, 192);
+    padding: 5px;
+    margin: 20px;
+
+}
+
+
+/* ========================================================== */
+
+
+
+.page2
+{
+    position: relative;
+    background-color: beige;
+    width: 96vw;
+    height: 150vh;
+    margin: 2%;
+    z-index: -2;
+}
+
+.page2 h2
+{
+    position: relative;
+    color: #101010;
+    width: 700px;
+    z-index: 2;
+}
+.page2 h2::before
+{
+    z-index: -1;
+    position: absolute;
+    content: "   ";
+    background-color: var(--primary);
+    width: 225px;
+    height: 40px;
+    right: 0;
+}
+
+.page2 .atas
+{
+    display: flex;
+    height: 20%;
+
+}
+.page2 .bawah
+{
+    display: flex;
+    height: 80%;
+
+}
+
+
+
+.page2 .kiri
+{
+    background-color: rgb(227, 227, 203);
+    width: 60%;
+    padding: 4%;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+.page2 .kiri h1
+{
+
+    color: #101010;
+    line-height: 30px;
+    font-size: 40px;
+    font-weight: 600;
+}
+.page2 .kiri span
+{
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--secondary)
+}
+
+
+
+.page2 .kanan
+{
+    background-color: rgb(227, 227, 203);
+    width: 40%;
+}
+
+
+
+.page2 .kiri2
+{
+    width: 30%;
+    padding: 3%;
+    box-sizing: border-box;
+    padding-left: 7%;
+    /* background-color: darkorange; */
+}
+
+.page2 .kanan2
+{
+    color: black;
+    width: 70%;
+    padding: 3%;
+    box-sizing: border-box;
+    /* background-color: aqua; */
+}
+.page2 .kanan2 h2
+{
+    font-size: 22px; 
+
+}
