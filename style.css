@@ -360,6 +360,7 @@ li a:hover
   
   .container input:checked ~ .checkmark {
     background-color: #f32121;
+    border-radius: 100%;
   }
 
 
