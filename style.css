@@ -147,7 +147,7 @@ li a:hover
 {
     position: relative;
     color: #101010;
-    width: 700px;
+    width: 100%;
     z-index: 2;
 }
 .page2 h2::before
@@ -246,6 +246,12 @@ li a:hover
     padding-left: 7%;
     /* background-color: darkorange; */
 }
+
+
+
+
+
+
 
 .page2 .kanan2
 {
